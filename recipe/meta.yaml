@@ -1,4 +1,4 @@
-{% set version = '4.1-8' %}
+{% set version = "4.1-9" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/hergm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/hergm/hergm_{{ version }}.tar.gz
-  sha256: 66a2664c4112912bb944e5246e6522806b2113576488a5f174998fb163935fe5
+  sha256: 8817fffd8cb40a60ce5e61164c951f2ce1de22bae4660a1655f1fa49de9e0f4b
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -67,11 +67,10 @@ test:
 about:
   home: https://CRAN.R-project.org/package=hergm
   license: GPL-3.0-only
-  summary: Hierarchical exponential-family random graph models with local dependence. See Schweinberger
-    and Luna (2018) <doi:10.18637/jss.v085.i01>.
+  summary: Hierarchical exponential-family random graph models with local dependence. See Schweinberger and Luna (2018) <doi:10.18637/jss.v085.i01>.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
