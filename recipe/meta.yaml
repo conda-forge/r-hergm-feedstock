@@ -1,4 +1,4 @@
-{% set version = "4.1-9" %}
+{% set version = "4.1-10" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/hergm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/hergm/hergm_{{ version }}.tar.gz
-  sha256: 8817fffd8cb40a60ce5e61164c951f2ce1de22bae4660a1655f1fa49de9e0f4b
+  sha256: 30f18b18d2c5b6b325c447fd12e1689980f1c3e51d69abacbc398dac6b2d7913
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
